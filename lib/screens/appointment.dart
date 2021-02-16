@@ -1,8 +1,18 @@
+import 'package:Telemedicine_ui/screens/type_appointment.dart';
+import 'package:Telemedicine_ui/screens/type_availability.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:Telemedicine_ui/widget//widget.dart';
 
-class AppointmentScreen extends StatelessWidget {
+class AppointmentScreen extends StatefulWidget {
+  @override
+  _AppointmentScreenState createState() => _AppointmentScreenState();
+}
+
+class _AppointmentScreenState extends State<AppointmentScreen> {
+  final List<Widget> _appointmentType = [TypeAppointmentsScreen(), TypeAvailabilityScreen()];
+
+  int _currentType = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +35,14 @@ class AppointmentScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 24.0),
             child: CustomTapBar(
                 titles: ["Appointments", "Availability"],
-                onClick: (index) => null),
+                onClick: (index) => setState(() => _currentType = index)),
           ),
-
+          Expanded(
+            child: IndexedStack(
+              index: _currentType,
+              children: _appointmentType,
+            ),
+          )
         ],
       ),
     );
