@@ -23,13 +23,25 @@ class _UpcomingAppointmentScreenState extends State<UpcomingAppointmentScreen> {
         SizedBox(height: 15),
         Expanded(
           child: ListView.builder(
-            scrollDirection: Axis.vertical,
-            itemCount: upcomingCalender.length, itemBuilder: (context, index){
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
-              child: CalenderItem(calender:  upcomingCalender[index],),
-            );
-          }),
+              scrollDirection: Axis.vertical,
+              itemCount: doctorCalender.length,
+              itemBuilder: (context, index) {
+                final calender = doctorCalender[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 12.0, horizontal: 24.0),
+                  child: calender.name == null
+                      ? Center(
+                        child: Text(
+                            "${calender.dayOfTheWeek} ${calender.month} ${calender.day}",
+                            style: TextStyle(
+                                color: Colors.grey[400],
+                                fontWeight: FontWeight.bold),
+                          ),
+                      )
+                      : CalenderItem(calender: calender),
+                );
+              }),
         )
       ],
     );
@@ -48,22 +60,25 @@ class _UpcomingAppointmentScreenState extends State<UpcomingAppointmentScreen> {
           height: 35.0,
           padding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 4.0),
           child: DropdownButton(
-            icon: Icon(Icons.arrow_drop_down, color: Colors.grey[400],),
+            icon: Icon(
+              Icons.arrow_drop_down,
+              color: Colors.grey[400],
+            ),
             value: selectedValue,
             items: _sortByTitle
                 .map(
                   (String value) => DropdownMenuItem(
-                value: value,
-                child: Text(value, style: TextStyle(color: Colors.grey[400])),
-              ),
-            )
+                    value: value,
+                    child:
+                        Text(value, style: TextStyle(color: Colors.grey[400])),
+                  ),
+                )
                 .toList(),
             onChanged: (value) => setState(() => selectedValue = value),
           ),
           decoration: BoxDecoration(
               border: Border.all(color: Colors.grey[400]),
-              borderRadius: BorderRadius.circular(8.0)
-          ),
+              borderRadius: BorderRadius.circular(8.0)),
         )
       ],
     );

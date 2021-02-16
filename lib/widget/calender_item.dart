@@ -31,8 +31,7 @@ class CalenderItem extends StatelessWidget {
                 height: 70,
                 width: 60,
                 decoration: BoxDecoration(
-                  color: appointmentType == AppointmentType.Upcoming ? Colors
-                      .blueAccent : Colors.yellow,
+                  color: appointmentType == AppointmentType.Upcoming ? Colors.deepOrangeAccent : Colors.blueAccent,
                     border: Border.all(
                         color: Colors.grey[200]),
                     borderRadius: BorderRadius.circular(8.0)

@@ -1,3 +1,4 @@
+import 'package:Telemedicine_ui/screens/past_appointment.dart';
 import 'package:Telemedicine_ui/screens/upcomingappointment_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ class TypeAppointmentsScreen extends StatefulWidget {
 
 class _TypeAppointmentsScreenState extends State<TypeAppointmentsScreen> {
 
-  final _destination = [UpcomingAppointmentScreen(), Scaffold()];
+  final _destination = [UpcomingAppointmentScreen(), PastAppointmentScreen()];
   int _currentItem = 0;
 
   @override
