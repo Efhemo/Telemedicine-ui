@@ -8,4 +8,5 @@ also As a doctor, I can set my availability dates for appointments
 
 ![alt text](https://github.com/Efhemo/Telemedicine-ui/blob/main/screenshots/telemedicine.png)
 
+## Get Started
 Clone the repository and build and run.
