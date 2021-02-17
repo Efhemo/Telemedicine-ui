@@ -15,7 +15,7 @@ class CalenderItem extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
-          color: Colors.grey[50],
+          color: Palette.backgroundFaintGrey,
           border: Border.all(
               color: Colors.grey[300]),
           borderRadius: BorderRadius.circular(10.0)
@@ -31,7 +31,7 @@ class CalenderItem extends StatelessWidget {
                 height: 70,
                 width: 60,
                 decoration: BoxDecoration(
-                  color: appointmentType == AppointmentType.Upcoming ? Colors.deepOrangeAccent : Colors.blueAccent,
+                  color: appointmentType == AppointmentType.Upcoming ? Palette.faintOrange : Palette.deepFaintGrey,
                     border: Border.all(
                         color: Colors.grey[200]),
                     borderRadius: BorderRadius.circular(8.0)
@@ -57,7 +57,7 @@ class CalenderItem extends StatelessWidget {
                     SizedBox(height: 8.0),
                     Text(calender.complaint, style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey[900], fontSize: 12.0)  ),
                     SizedBox(height: 8.0),
-                    Text(calender.description, style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey[800], fontSize: 11.0)),
+                    Text(calender.description, style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey[600], fontSize: 11.0)),
                     SizedBox(height: 10.0),
                     Text(calender.time, style: TextStyle(color: Colors.black, fontSize: 13.0)),
                   ],
@@ -66,7 +66,7 @@ class CalenderItem extends StatelessWidget {
             ],
           ),
           SizedBox(height: 14.0),
-          Divider(thickness: 1.0, indent: 40.0, endIndent: 20),
+          Divider(thickness: 1.0, indent: 25.0, height: 1, endIndent: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

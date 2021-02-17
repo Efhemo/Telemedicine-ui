@@ -1,7 +1,13 @@
 import 'package:Telemedicine_ui/screens/main_bottom_nav.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.black,
+    statusBarColor: Colors.transparent,
+    //systemNavigationBarIconBrightness: Brightness.dark, //navigation bar icons' color
+  ));
   runApp(MyApp());
 }
 
@@ -14,7 +20,6 @@ class MyApp extends StatelessWidget {
       title: 'Telemedicine',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        backgroundColor: Colors.white,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

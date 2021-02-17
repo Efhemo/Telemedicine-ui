@@ -31,7 +31,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
               children: _destinations,
             ),
           ),
-          Divider(color: Theme.of(context).primaryColor, thickness: 1, indent: 0.0,)
+          Divider(color: Theme.of(context).primaryColor, height: 1, thickness: 1, indent: 0.0)
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -48,18 +48,20 @@ class _PastAppointmentScreenState extends State<PastAppointmentScreen> {
         Container(
           height: 35.0,
           padding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 8.0),
-          child: DropdownButton(
-            icon: Icon(Icons.arrow_drop_down, color: Colors.grey[400],),
-            value: selectedValue,
-            items: _sortByTitle
-                .map(
-                  (String value) => DropdownMenuItem(
-                value: value,
-                child: Text(value, style: TextStyle(color: Colors.grey[400])),
-              ),
-            )
-                .toList(),
-            onChanged: (value) => setState(() => selectedValue = value),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton(
+              icon: Icon(Icons.arrow_drop_down, color: Colors.grey[400],),
+              value: selectedValue,
+              items: _sortByTitle
+                  .map(
+                    (String value) => DropdownMenuItem(
+                  value: value,
+                  child: Text(value, style: TextStyle(color: Colors.grey[400])),
+                ),
+              )
+                  .toList(),
+              onChanged: (value) => setState(() => selectedValue = value),
+            ),
           ),
           decoration: BoxDecoration(
               border: Border.all(color: Colors.grey[400]),

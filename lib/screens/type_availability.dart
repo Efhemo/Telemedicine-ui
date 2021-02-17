@@ -1,3 +1,4 @@
+import 'package:Telemedicine_ui/config/palette.dart';
 import 'package:Telemedicine_ui/data/data.dart';
 import 'package:Telemedicine_ui/widget/availability_item_card.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,7 +23,7 @@ class _TypeAvailabilityScreenState extends State<TypeAvailabilityScreen> {
         DatePicker(
           DateTime.now(),
           initialSelectedDate: DateTime.now().add(Duration(days: 2)),
-          selectionColor: Colors.pinkAccent,
+          selectionColor: Palette.faintPink,
           selectedTextColor: Colors.black,
           monthTextStyle: TextStyle(color: Colors.grey),
           dateTextStyle: TextStyle(color: Colors.grey),
@@ -48,4 +49,5 @@ class _TypeAvailabilityScreenState extends State<TypeAvailabilityScreen> {
       ],
     );
   }
+
 }

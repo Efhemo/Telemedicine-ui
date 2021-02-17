@@ -20,11 +20,11 @@ class AvailabilityItemCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(availability.timeOfDay,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0)),
             SizedBox(height: 6.0),
             Text(availability.time,
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.grey[300], fontSize: 16.0)),
+                    fontWeight: FontWeight.bold, color: Colors.grey[350], fontSize: 16.0)),
             SizedBox(height: 20.0),
             MultiSelectChipGroup(
               items: availability.times,

@@ -72,7 +72,7 @@ class _MultiSelectChipGroupState extends State<MultiSelectChipGroup> {
       labelPadding: widget.padding,
       padding: widget.padding,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(12.0),
           side: BorderSide(
               color: selectedChoices.contains(item)
                   ? widget.labelSelectedColor == null
