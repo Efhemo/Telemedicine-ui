@@ -32,7 +32,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 24.0),
+            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 70.0),
             child: CustomTapBar(
                 titles: ["Appointments", "Availability"],
                 onClick: (index) => setState(() => _currentType = index)),

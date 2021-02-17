@@ -1,5 +1,5 @@
 import 'package:Telemedicine_ui/screens/past_appointment.dart';
-import 'package:Telemedicine_ui/screens/upcomingappointment_screen.dart';
+import 'package:Telemedicine_ui/screens/upcoming_appointment.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:Telemedicine_ui/widget/widget.dart';
